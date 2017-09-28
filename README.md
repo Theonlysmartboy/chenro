@@ -1,1 +1,3 @@
 # chenro
+## About ##
+Timetabling system
