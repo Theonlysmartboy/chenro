@@ -1,7 +1,7 @@
-
 package com.otema.tosby.timetabler.cs.domain;
 
 public class Class {
+
     private int Id;
     private Department dept;
     private Course course;
@@ -50,5 +50,10 @@ public class Class {
     public Room getRoom() {
         return room;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Class{" + "Id=" + Id + ", dept=" + dept + ", course=" + course + ", instructor=" + instructor + ", meetingtime=" + meetingtime + ", room=" + room + '}';
+    }
+
 }
