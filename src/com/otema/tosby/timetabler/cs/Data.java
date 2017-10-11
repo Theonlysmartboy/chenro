@@ -6,6 +6,7 @@ import com.otema.tosby.timetabler.cs.domain.Instructor;
 import com.otema.tosby.timetabler.cs.domain.MeetingTime;
 import com.otema.tosby.timetabler.cs.domain.Room;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Data {
 
@@ -21,6 +22,11 @@ public class Data {
     }
 
     private Data initialize() {
+         Room room1 = new Room("R1", 25);
+        Room room2 = new Room("R2", 25);
+        Room room3 = new Room("R3", 25);
+        rooms = new ArrayList<Room>(Arrays.asList(room1,room2,room3));
+        
         return this;
     }
 
