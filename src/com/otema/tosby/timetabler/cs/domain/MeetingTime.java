@@ -5,7 +5,7 @@ public class MeetingTime {
     private String Id;
     private String time;
 
-    public MeetingTime(String Id) {
+    public MeetingTime(String Id,String time) {
         this.Id = Id;
     }
 
