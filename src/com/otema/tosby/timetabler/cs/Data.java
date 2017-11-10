@@ -26,7 +26,7 @@ public class Data {
         Room room2 = new Room("R2", 25);
         Room room3 = new Room("R3", 25);
         rooms = new ArrayList<Room>(Arrays.asList(room1, room2, room3));
-        MeetingTime time = new MeetingTime("MT1","Mon 07:00 - 11:00");
+        MeetingTime time = new MeetingTime("MT1","Mon 07:00 - 11:00"); 
         MeetingTime time1 = new MeetingTime("MT2","Mon 12:00 - 16:00");
         MeetingTime time2 = new MeetingTime("MT3","Mon 16:00 - 20:00");
         MeetingTime time3 = new MeetingTime("MT4","Tue 07:00 - 11:00");
@@ -37,9 +37,15 @@ public class Data {
         Instructor instructor2 = new Instructor("I3","Janet");
         Instructor instructor3 = new Instructor("I4","Joseph");
         Instructor instructor4 = new Instructor("I5","Tosby");
-        instructors = new ArrayList<Instructor>(Arrays.asList(instructor, instructor1, instructor2, instructor3, instructor4));
+        Instructor instructor5 = new Instructor("I6","Odhiambo");
+        instructors = new ArrayList<Instructor>(Arrays.asList(instructor, instructor1, instructor2, instructor3, instructor4,instructor5));
         Course course = new Course("C1", "325K",new ArrayList<Instructor>(Arrays.asList(instructor, instructor1)),25);
-
+        Course course1 = new Course("C2", "325K",new ArrayList<Instructor>(Arrays.asList(instructor1, instructor2)),25);
+        Course course2 = new Course("C3", "325K",new ArrayList<Instructor>(Arrays.asList(instructor2, instructor3)),25);
+        Course course3 = new Course("C4", "325K",new ArrayList<Instructor>(Arrays.asList(instructor3, instructor4)),25);
+        Course course4 = new Course("C2", "325K",new ArrayList<Instructor>(Arrays.asList(instructor4, instructor)),25);
+        courses = new ArrayList<Course>(Arrays.asList(course, course1, course2, course3, course4));
+        
         return this;
     }
 
