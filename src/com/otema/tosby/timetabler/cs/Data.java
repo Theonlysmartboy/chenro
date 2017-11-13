@@ -40,11 +40,18 @@ public class Data {
         Instructor instructor5 = new Instructor("I6","Odhiambo");
         instructors = new ArrayList<Instructor>(Arrays.asList(instructor, instructor1, instructor2, instructor3, instructor4,instructor5));
         Course course = new Course("C1", "325K",new ArrayList<Instructor>(Arrays.asList(instructor, instructor1)),25);
-        Course course1 = new Course("C2", "325K",new ArrayList<Instructor>(Arrays.asList(instructor1, instructor2)),25);
-        Course course2 = new Course("C3", "325K",new ArrayList<Instructor>(Arrays.asList(instructor2, instructor3)),25);
-        Course course3 = new Course("C4", "325K",new ArrayList<Instructor>(Arrays.asList(instructor3, instructor4)),25);
-        Course course4 = new Course("C2", "325K",new ArrayList<Instructor>(Arrays.asList(instructor4, instructor)),25);
-        courses = new ArrayList<Course>(Arrays.asList(course, course1, course2, course3, course4));
+        Course course1 = new Course("C2", "325K",new ArrayList<Instructor>(Arrays.asList(instructor1, instructor2)),30);
+        Course course2 = new Course("C3", "325K",new ArrayList<Instructor>(Arrays.asList(instructor2, instructor3)),35);
+        Course course3 = new Course("C4", "325K",new ArrayList<Instructor>(Arrays.asList(instructor3, instructor4)),45);
+        Course course4 = new Course("C5", "325K",new ArrayList<Instructor>(Arrays.asList(instructor4, instructor)),15);
+        Course course5 = new Course("C6", "325K",new ArrayList<Instructor>(Arrays.asList(instructor1, instructor4)),25);
+        Course course6 = new Course("C7", "325K",new ArrayList<Instructor>(Arrays.asList(instructor3, instructor2)),35);
+        courses = new ArrayList<Course>(Arrays.asList(course, course1, course2, course3, course4, course5, course6));
+        Department dept = new Department("IT",new ArrayList<Course>(Arrays.asList(course, course2)));
+        Department dept1 = new Department("CS",new ArrayList<Course>(Arrays.asList(course1, course3,course4)));
+        Department dept2 = new Department("MIT",new ArrayList<Course>(Arrays.asList(course5, course6)));
+        depts = new ArrayList<Department>(Arrays.asList(dept, dept1, dept2));
+        depts.forEach(x ->numberOfClasses += x.getCourse().size());
         
         return this;
     }
