@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 
 public class Schedule {
+    private int ClassNumb=0;
     private ArrayList<Class> classes;
     private Data data;
     public Data getData(){
@@ -15,6 +16,8 @@ public class Schedule {
         this.data = data;
         classes = new ArrayList<Class>(data.getNumberOfClasses());
     }
-    
+    public Schedule initialize(){
+        
+    }
     
 }
